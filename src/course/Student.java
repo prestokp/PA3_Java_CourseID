@@ -45,7 +45,7 @@ public class Student {
     return (score1 + score2 + score3)/3.0;
   }
 
-  public double average(double[] testScores){
+  public double average(){
     return (testScores[0] + testScores[1] + testScores[2])/testScores.length;
   }
 
@@ -60,7 +60,7 @@ public class Student {
     result += "School Address:\n" + schoolAddress + "\n";
     result += "Test Scores:\n" + testScores[0] + "\n" +
             testScores[1] + "\n" + testScores[2] + "\n";
-    result += "Test Average:\n" + average(testScores);
+    result += "Test Average:\n" + average();
 
     return result;
   }
