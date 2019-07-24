@@ -6,6 +6,9 @@ public class Student {
   private String lastName;
   private Address homeAddress;
   private Address schoolAddress;
+  private int testNumber;
+  private double[] testScores;
+  private double score1, score2, score3;
 
   public Student(String firstName, String lastName, Address homeAddress, Address schoolAddress) {
     this.firstName = firstName;
@@ -13,6 +16,32 @@ public class Student {
     this.homeAddress = homeAddress;
     this.schoolAddress = schoolAddress;
   }
+
+  public Student(String firstName, String lastName, Address homeAddress, Address schoolAddress, double[] testScores){
+
+  }
+
+  public Student(String firstName, String lastName, Address homeAddress, Address schoolAddress,
+                 double score1, double score2, double score3){
+
+  }
+
+  public double getTestScore(int testNumber){
+    return testScores[testNumber];
+  }
+
+  public double setTestScore(double[] testScores, int testNumber){
+    return 0;
+  }
+
+  public double average(double score1, double score2, double score3){
+    return (score1 + score2 + score3)/3.0;
+  }
+
+  public double average(double[] testScores){
+    return (testScores[0] + testScores[1] + testScores[2])/testScores.length;
+  }
+
 
   @Override
   public String toString()
