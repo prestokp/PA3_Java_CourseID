@@ -39,11 +39,10 @@ public class CourseDriver {
         sc.nextLine();
       }//Conditional Delimiter
 
-      //Public methods from the course class to be implemented
-      course.roll();
-      course.average();
-
     }//While loop delimiter
+      //Public methods from the course class to be implemented
+      Course.Roll();
+      Course.average();
 
   }//Main function delimiter
 

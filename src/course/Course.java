@@ -8,20 +8,34 @@ public class Course {
     private String courseName;
 
     //Declares an array list to hold student objects
-    ArrayList<Student> students = new ArrayList<Student>();
+    private ArrayList<Student> studentList;
+
+    //Constructor to instantiate the array list, studentList
+    public void StudentList(){
+        studentList = new ArrayList<>();
+    }
+
+    //Adds students to the course's student array list
+    public void addStudent(Student student){
+        studentList.add(student);
+    }
 
     //Course constructor
     public Course(String courseName){
         this.courseName = courseName;
     }
 
-    //Method to add students to the course
-    public void addStudent(Student incomingStudent){
-
+    public void Roll(){
+        for(int i = 0; i < studentList.size(); i++){
+            System.out.println(studentList.get(i) + " ");
+            System.out.println();
+        }
     }
 
     //Method to compute the course average
     public double average(Student student){
-        double average = student.average()/
+        double average = student.average()/studentList.size();
+        System.out.println("Course Average: " + average);
+        return average;
     }
 }
