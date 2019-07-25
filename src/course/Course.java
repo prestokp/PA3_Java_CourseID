@@ -10,6 +10,11 @@ public class Course {
     //Declares an array list to hold student objects
     private ArrayList<Student> studentList;
 
+    /*public void average(Student student) {
+        double average = student.average()/studentList.size();
+        System.out.println("Course Average: " + average);
+    }*/
+
     //Constructor to instantiate the array list, studentList
     public void StudentList(){
         studentList = new ArrayList<>();

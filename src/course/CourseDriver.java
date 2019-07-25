@@ -9,6 +9,14 @@ public class CourseDriver {
 
   public static void main(String[] args) {
 
+    double courseAverage;
+
+    // scanner for key board
+    Scanner keyboard = new Scanner(System.in);
+    //prompt
+    System.out.println("Course Name: ");
+    //create new course with keyboard input as argument
+    Course alphaCourse = new Course(keyboard.next());
     Scanner sc = null; //assigned a value to prevent a program failure
     try{
       sc = new Scanner(new File("students.txt")); //streams the file through file object
@@ -40,10 +48,13 @@ public class CourseDriver {
         sc.nextLine();
       }//Conditional Delimiter
 
-    }//While loop delimiter
       //Public methods from the course class to be implemented
-      Course.Roll();
-      Course.average();
+      alphaCourse.addStudent(Student);
+      alphaCourse.Roll();
+      alphaCourse.average();
+
+    }//While loop delimiter
+
 
   }//Main function delimiter
 
