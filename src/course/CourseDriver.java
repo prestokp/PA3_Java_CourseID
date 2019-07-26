@@ -47,14 +47,19 @@ public class CourseDriver {
       if (sc.hasNext()){
         sc.nextLine();
       }//Conditional Delimiter
+      Address home = new Address(homeStreet, homeCity, homeState, Integer.parseInt(homeZip));
+      Address school = new Address(schoolStreet, schoolCity, schoolState, Integer.parseInt(schoolZip));
+
+      Student alphaStudent = new Student(firstName, lastName, home, school, Double.parseDouble(testScore1),
+              Double.parseDouble(testScore2), Double.parseDouble(testScore3));
 
       //Public methods from the course class to be implemented
-      alphaCourse.addStudent(Student);
-      alphaCourse.Roll();
-      alphaCourse.average();
+      alphaCourse.addStudent(alphaStudent);
+
 
     }//While loop delimiter
-
+    alphaCourse.roll();
+    alphaCourse.average();
 
   }//Main function delimiter
 

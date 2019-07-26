@@ -22,6 +22,7 @@ public class Student {
     this(firstName, lastName, homeAddress, schoolAddress, testScores[0], testScores[1], testScores[2]);
   }
 
+  //Workhorse constructor
   public Student(String firstName, String lastName, Address homeAddress, Address schoolAddress,
                  double score1, double score2, double score3){
     this.firstName = firstName;

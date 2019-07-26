@@ -10,11 +10,6 @@ public class Course {
     //Declares an array list to hold student objects
     private ArrayList<Student> studentList;
 
-    /*public void average(Student student) {
-        double average = student.average()/studentList.size();
-        System.out.println("Course Average: " + average);
-    }*/
-
     //Constructor to instantiate the array list, studentList
     public void StudentList(){
         studentList = new ArrayList<>();
@@ -30,7 +25,7 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public void Roll(){
+    public void roll(){
         for(int i = 0; i < studentList.size(); i++){
             System.out.println(studentList.get(i) + " ");
             System.out.println();
@@ -38,9 +33,26 @@ public class Course {
     }
 
     //Method to compute the course average
-    public double average(Student student){
-        double average = student.average()/studentList.size();
-        System.out.println("Course Average: " + average);
-        return average;
+    //Iterate through student list with for each loop to get
+    //proper average for course
+
+    /*public void average(Student student){
+        double total = 0;
+        double avg;
+        for (Student s : studentList){
+            total = total + s.average();
+        }
+        avg = total/studentList.size();
+        System.out.println("Course Average: " + avg);
+    }*/
+
+    public void average() {
+        double total = 0;
+        double avg;
+        for (Student s : studentList){
+            total = total + s.average();
+        }
+        avg = total/studentList.size();
+        System.out.println("Course Average: " + avg);
     }
 }
