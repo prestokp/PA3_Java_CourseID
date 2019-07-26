@@ -25,16 +25,14 @@ public class Course {
         this.courseName = courseName;
     }
 
+    //Roll method to display a list of students
     public void roll(){
+        //Regular for loop to iterate through each student, For-Each loop might be better
         for(int i = 0; i < studentList.size(); i++){
             System.out.println(studentList.get(i) + " ");
             System.out.println();
         }
     }
-
-    //Method to compute the course average
-    //Iterate through student list with for each loop to get
-    //proper average for course
 
     /*public void average(Student student){
         double total = 0;
@@ -46,9 +44,13 @@ public class Course {
         System.out.println("Course Average: " + avg);
     }*/
 
+    //Method to compute the course average
+    //Iterate through student list with for each loop to get
+    //proper average for course
     public void average() {
         double total = 0;
         double avg;
+        //For each loop to iterate through an array
         for (Student s : studentList){
             total = total + s.average();
         }

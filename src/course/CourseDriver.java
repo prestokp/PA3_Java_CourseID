@@ -1,6 +1,5 @@
 package course;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -9,15 +8,17 @@ public class CourseDriver {
 
   public static void main(String[] args) {
 
-    double courseAverage;
-
-    // scanner for key board
+    // scanner for keyboard
     Scanner keyboard = new Scanner(System.in);
+
     //prompt
     System.out.println("Course Name: ");
+
     //create new course with keyboard input as argument
     Course alphaCourse = new Course(keyboard.next());
-    Scanner sc = null; //assigned a value to prevent a program failure
+
+    //assigned a value to prevent a program failure
+    Scanner sc = null;
     try{
       sc = new Scanner(new File("students.txt")); //streams the file through file object
     }
@@ -25,6 +26,7 @@ public class CourseDriver {
       e.printStackTrace();
     }//Catch Block Delimiter
 
+    //While loop to facilitate file stream from file to variable
     while(sc.hasNext()){
 
       //Reads in the lines from the text file and assign
@@ -47,18 +49,24 @@ public class CourseDriver {
       if (sc.hasNext()){
         sc.nextLine();
       }//Conditional Delimiter
+
+      //Instantiates address objects to file data has a place to go
       Address home = new Address(homeStreet, homeCity, homeState, Integer.parseInt(homeZip));
       Address school = new Address(schoolStreet, schoolCity, schoolState, Integer.parseInt(schoolZip));
 
+      //Instantiates a student object to have a place to store file data for student
       Student alphaStudent = new Student(firstName, lastName, home, school, Double.parseDouble(testScore1),
               Double.parseDouble(testScore2), Double.parseDouble(testScore3));
 
-      //Public methods from the course class to be implemented
+      //addStudent method from course class to add student object into course
       alphaCourse.addStudent(alphaStudent);
 
-
     }//While loop delimiter
+
+    //Roll method to display list of students in class
     alphaCourse.roll();
+
+    //Average method to get course average
     alphaCourse.average();
 
   }//Main function delimiter
