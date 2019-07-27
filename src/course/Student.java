@@ -7,7 +7,10 @@ public class Student {
   private Address homeAddress;
   private Address schoolAddress;
   private int testNumber;
-  private double[] testScores;
+
+  //The array needs to be instantiated before it can be used otherwise a null pointer exception will exist
+  private double[] testScores = new double[3];
+
   private double score1, score2, score3;
 
   public Student(String firstName, String lastName, Address homeAddress, Address schoolAddress) {
@@ -30,16 +33,10 @@ public class Student {
     this.homeAddress = homeAddress;
     this.schoolAddress = schoolAddress;
 
-    //Originally had these values assigned to the different indices
-    //in the doubles array
-
-    testScores[0] = score1;
-    testScores[1] = score2;
-    testScores[2] = score3;
-
-    /*this.score1 = score1;
-    this.score2 = score2;
-    this.score3 = score3;*/
+    //Points to the array stored in this function
+    this.testScores[0] = score1;
+    this.testScores[1] = score2;
+    this.testScores[2] = score3;
   }
 
   public double getTestScore(int testNumber){
