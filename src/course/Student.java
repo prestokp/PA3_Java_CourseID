@@ -32,9 +32,14 @@ public class Student {
 
     //Originally had these values assigned to the different indices
     //in the doubles array
-    this.score1 = score1;
+
+    testScores[0] = score1;
+    testScores[1] = score2;
+    testScores[2] = score3;
+
+    /*this.score1 = score1;
     this.score2 = score2;
-    this.score3 = score3;
+    this.score3 = score3;*/
   }
 
   public double getTestScore(int testNumber){
