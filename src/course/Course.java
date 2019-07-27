@@ -8,7 +8,9 @@ public class Course {
     private String courseName;
 
     //Declares an array list to hold student objects
-    private ArrayList<Student> studentList;
+    //When you declare the arrays & array lists you must ensure that they are
+    //instantiated when you declare them
+    private ArrayList<Student> studentList = new ArrayList<>();
 
     //Constructor to instantiate the array list, studentList
     public void StudentList(){
